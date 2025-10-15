@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import NewsTicker from "./NewsTicker";
 
 const pages = [
   { id: "home", label: "Chat", route: "/" },
@@ -96,8 +97,9 @@ export default function Navigation() {
   const [mobileOpenSub, setMobileOpenSub] = useState<string | null>(null);
 
   return (
-    <header className="h-16 bg-white/8 backdrop-blur-xl border-b border-white/15 sticky top-0 z-50 shadow-lg shadow-black/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center">
+    <>
+      <header className="h-16 bg-white/8 backdrop-blur-xl border-b border-white/15 sticky top-0 z-50 shadow-lg shadow-black/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center">
         <div className="flex items-center gap-3 min-w-0">
           <button
             className="lg:hidden w-8 h-8 rounded-lg flex items-center justify-center hover:opacity-80 transition-all duration-200 z-50"
@@ -287,5 +289,7 @@ export default function Navigation() {
         </div>
       )}
     </header>
+    <NewsTicker />
+    </>
   );
 }
