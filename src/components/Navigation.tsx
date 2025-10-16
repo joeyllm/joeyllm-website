@@ -242,23 +242,40 @@ export default function Navigation() {
           <nav className="p-4 space-y-3">
             {pages.map((p) => (
               <div key={p.id}>
-                <button
-                  className="w-full text-left px-4 py-3 rounded-xl text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200 flex justify-between items-center focus:outline-none"
-                  onClick={() => {
-                    if (!p.subPages) {
-                      router.push(p.route);
+                <div className="w-full flex items-center justify-between">
+                  {/* Main label: navigates to the parent route (so parent pages are reachable on mobile) */}
+                  <button
+                    className="flex-1 text-left px-4 py-3 rounded-xl text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200 focus:outline-none"
+                    onClick={() => {
+                      // Navigate to the parent route for both pages with and without subPages
+                      if (p.route && p.route.startsWith('http')) {
+                        window.open(p.route, '_blank');
+                      } else if (p.route) {
+                        router.push(p.route);
+                      }
                       setIsMobileOpen(false);
-                    } else {
-                      setMobileOpenSub((prev) => (prev === p.id ? null : p.id));
-                    }
-                  }}
-                  aria-expanded={mobileOpenSub === p.id}
-                >
-                  <span>{p.label}</span>
+                      setMobileOpenSub(null);
+                    }}
+                  >
+                    <span>{p.label}</span>
+                  </button>
+
+                  {/* Toggle button: only shown when there are subPages */}
                   {p.subPages && (
-                    <span className="text-xs text-gray-400">▾</span>
+                    <button
+                      className="ml-2 w-9 h-9 inline-flex items-center justify-center rounded-lg text-sm text-gray-300 hover:text-white hover:bg-white/6 transition-all duration-200"
+                      aria-expanded={mobileOpenSub === p.id}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setMobileOpenSub((prev) => (prev === p.id ? null : p.id));
+                      }}
+                    >
+                      <span className={`text-xs text-gray-400 transform transition-transform duration-200 ${mobileOpenSub === p.id ? 'rotate-180' : 'rotate-0'}`}>
+                        ▾
+                      </span>
+                    </button>
                   )}
-                </button>
+                </div>
 
                 {p.subPages && (
                   <div
