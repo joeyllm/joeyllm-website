@@ -4,8 +4,7 @@ A Next.js front-end for JoeyLLM — sovereign Australian open-source AI.
 
 ## Getting Started
 
-This repository contains the Next.js front-end for the JoeyLLM website. It uses the App Router, Tailwind CSS, and TypeScript. The codebase is structured to keep most UI server-rendered and confine interactivity to small client components.
-
+This repository contains the Next.js front-end for the JoeyLLM website. It uses the App Router, Tailwind CSS, and TypeScript. 
 ## Quick start
 
 Requirements:
@@ -41,7 +40,7 @@ Open http://localhost:3000 in your browser.
 
 ## Where to edit content
 
-- The home page content lives at `src/app/(web)/(home)/content.ts`. Edit that file to change headings, gap statements, action paths and roadmap milestones.
+- The home page content lives at `src/app/(web)/(home)/content.ts`. Edit that file to change headings, and text content.
 - Route-level content can be colocated as `content.ts` files next to each `page.tsx`.
 
 ## Build & lint
