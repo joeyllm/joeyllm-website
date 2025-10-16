@@ -1,96 +1,29 @@
-export const homeContent = {
-	hero: {
-		mainHeading:
-			"Every Australian business relies on foreign AI.\n\nThat changes now.",
-		subheading:
-			"The case for sovereign, open-source Australian AI that stays in Australia.",
-	},
-	gap: [
+export const classicHomeContent = {
+	title: "Welcome to JoeyLLM",
+	subtitle:
+		"Your gateway to sovereign Australian AI. Our chat interface pairs state-of-the-art models with your curiosity.",
+	introduction:
+		"Chat with JoeyLLM, LittleJoey, and Magpie - three distinct AI models built for Australian contexts.",
+	features: [
 		{
+			title: "Australian AI Models",
+			description:
+				"Purpose-built language models trained with Australian context and values.",
 			icon: "🇦🇺",
-			title: "Trained on Australian Context",
+		},
+		{
+			title: "Open Source First",
 			description:
-				"Purpose-built language models trained with Australian context and values. Not retrofitted from overseas-centric models.",
+				"All our models are open source, transparent, and available for commercial use.",
+			icon: "🌟",
 		},
 		{
-			icon: "🛡️",
-			title: "Data Sovereignty",
+			title: "Community Driven",
 			description:
-				"Your data stays in Australia. No dependency on international cloud providers. Full control over your information.",
-		},
-		{
-			icon: "🔓",
-			title: "Fully Open-Source",
-			description:
-				"Transparent, auditable, and free from vendor lock-in. Use, modify, and deploy on your own terms.",
-		},
-	],
-	actionPaths: [
-		{
-			label: "Developers",
-			icon: "👨‍💻",
-			items: [
-				"Explore LittleJoey model cards & benchmarks",
-				"HuggingFace links and API docs",
-				"Quick-start guides and examples",
-			],
-			ctaText: "Explore Docs",
-			ctaHref: "/services",
-		},
-		{
-			label: "Community",
+				"Built by the community, for the community. Join our Discord and contribute.",
 			icon: "🤝",
-			items: [
-				"Join 500+ builders on Discord",
-				"Open GitHub issues and contribute",
-				"Showcase your projects",
-			],
-			ctaText: "Join Us",
-			ctaHref: "/community",
-		},
-		{
-			label: "Researchers",
-			icon: "📚",
-			items: [
-				"Read our research papers",
-				"Case studies and benchmarks",
-				"Training methodology transparency",
-			],
-			ctaText: "See Research",
-			ctaHref: "/projects",
 		},
 	],
-	roadmap: [
-		{
-			quarter: "Q4 2025",
-			title: "Chat UI Beta",
-			description:
-				"Early access to our interactive chat interface. Test drive JoeyLLM, LittleJoey, and Magpie.",
-		},
-		{
-			quarter: "Q1 2026",
-			title: "Fine-Tuning API",
-			description:
-				"Customize models with your own data. Full fine-tuning capabilities for enterprise use.",
-		},
-		{
-			quarter: "H2 2026",
-			title: "Enterprise Features",
-			description:
-				"Commercial licensing, SLAs, and dedicated support for businesses.",
-		},
-		{
-			quarter: "2027",
-			title: "Expansion",
-			description:
-				"Multimodal models, specialized domain adapters, and ecosystem integrations.",
-		},
-	],
-	emailSignup: {
-		heading: "🔔 Be among the first to access the chat interface",
-		placeholder: "Enter your email",
-		buttonText: "Sign me up",
-	},
 	mission: {
 		title: "Our Mission",
 		content:
