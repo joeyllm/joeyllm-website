@@ -1,10 +1,10 @@
 import React from 'react';
-import SITE_CONTENT from '@/content/siteContent';
 import PageHeader from '@/components/PageHeader';
 import ContentSection from '@/components/ContentSection';
+import { newsContent } from './content';
 
 export default function NewsArticlesPage() {
-   const pageData = SITE_CONTENT.news;
+   const pageData = newsContent
   
   return (
     <div className="space-y-8">

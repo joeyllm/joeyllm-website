@@ -1,14 +1,14 @@
 import React from 'react';
-import SITE_CONTENT from '@/content/siteContent';
 import ContentSection from '@/components/ContentSection';
 import TextList from '@/components/TextList';
 import PageHeader from '@/components/PageHeader';
 import GradientButton from '@/components/GradientButton';
+import { content } from './content';
 
 
 
 export default function LittleJoeyPage() {
-  const pageData = SITE_CONTENT.littlejoey;
+  const pageData = content
 
   return (
     <div className="space-y-8">

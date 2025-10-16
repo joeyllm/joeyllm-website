@@ -1,10 +1,10 @@
 import React from 'react';
-import SITE_CONTENT from '@/content/siteContent';
 import PageHeader from '@/components/PageHeader';
 import ContentSection from '@/components/ContentSection';
+import { ragContent } from './content';
 
 export default function RAGPage() {
-  const pageData = SITE_CONTENT.rag;
+  const pageData = ragContent
   return (
     <div className="space-y-8">
       <PageHeader title={pageData.title} subtitle={pageData.subtitle} />

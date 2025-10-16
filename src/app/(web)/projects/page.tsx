@@ -1,10 +1,10 @@
 import React from 'react';
-import SITE_CONTENT from '@/content/siteContent';
 import PageHeader from '@/components/PageHeader';
 import ContentSection from '@/components/ContentSection';
+import { projectsContent } from './content';
 
 export default function ProjectsPage() {
- const pageData = SITE_CONTENT.projects;
+ const pageData = projectsContent
   
   return (
     <div className="space-y-8">

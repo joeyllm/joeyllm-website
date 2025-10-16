@@ -1,10 +1,9 @@
-import React from 'react';
-import SITE_CONTENT from '@/content/siteContent';
 import PageHeader from '@/components/PageHeader';
 import ContentSection from '@/components/ContentSection';
+import { privacypolicyContent } from './content';
 
 export default function PrivacyPolicyPage() {
-  const pageData = SITE_CONTENT.privacypolicy;
+  const pageData = privacypolicyContent
   
   return (
     <div className="space-y-8">

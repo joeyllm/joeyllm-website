@@ -1,9 +1,10 @@
 import ContentSection from "@/components/ContentSection";
 import PageHeader from "@/components/PageHeader";
-import SITE_CONTENT from "@/content/siteContent";
+
+import { magpieContent } from "./content";
 
 export default function MagpiePage() {
-  const pageData = SITE_CONTENT.magpie;
+  const pageData = magpieContent
   
   return (
     <div className="space-y-8">

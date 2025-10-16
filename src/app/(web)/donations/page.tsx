@@ -1,10 +1,10 @@
 import React from 'react';
-import SITE_CONTENT from '@/content/siteContent';
 import PageHeader from '@/components/PageHeader';
 import ContentSection from '@/components/ContentSection';
+import { donationsContent } from './content';
 
 export default function DonationsPage() {
-  const pageData = SITE_CONTENT.donations;
+  const pageData = donationsContent;
   
   return (
     <div className="space-y-8">

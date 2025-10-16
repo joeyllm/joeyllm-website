@@ -1,10 +1,11 @@
 import React from 'react';
-import SITE_CONTENT from '@/content/siteContent';
 import PageHeader from '@/components/PageHeader';
 import ContentSection from '@/components/ContentSection';
+import { termsContent } from './content';
 
 export default function TermsPage() {
-   const pageData = SITE_CONTENT.terms;
+   const pageData = termsContent;
+
   
   return (
     <div className="space-y-8">

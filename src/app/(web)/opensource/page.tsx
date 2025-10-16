@@ -1,20 +1,25 @@
-import React from 'react';  
+import React from "react";
 
-import InfoGrid from '@/components/InfoGrid';
-import GradientButton from '@/components/GradientButton';
-import PageHeader from '@/components/PageHeader';
-import ContentSection from '@/components/ContentSection';
-import SITE_CONTENT from '@/content/siteContent';
-
+import InfoGrid from "@/components/InfoGrid";
+import GradientButton from "@/components/GradientButton";
+import PageHeader from "@/components/PageHeader";
+import ContentSection from "@/components/ContentSection";
+import { content } from "./content";
 
 export default function OpenSourcePage() {
-  const pageData = SITE_CONTENT.opensource;
+  const pageData = content;
 
   return (
     <div className="space-y-8">
       <PageHeader title={pageData.title} subtitle={pageData.subtitle} />
 
-      {pageData.models && <InfoGrid items={pageData.models} title="Available Models" columns={1} />}
+      {pageData.models && (
+        <InfoGrid
+          items={pageData.models}
+          title="Available Models"
+          columns={2}
+        />
+      )}
 
       {pageData.customModels && (
         <ContentSection title={pageData.customModels.title}>
@@ -31,7 +36,9 @@ export default function OpenSourcePage() {
       <div className="text-center">
         <div className="space-x-4">
           <GradientButton>Download Models</GradientButton>
-          <GradientButton variant="secondary">View Documentation</GradientButton>
+          <GradientButton variant="secondary">
+            View Documentation
+          </GradientButton>
         </div>
       </div>
     </div>

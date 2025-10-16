@@ -1,9 +1,9 @@
 import React from "react";
-import SITE_CONTENT from "@/content/siteContent";
 import PageHeader from "@/components/PageHeader";
 import ContentSection from "@/components/ContentSection";
+import { servicesContent } from "./content";
 export default function ServicesPage() {
-  const pageData = SITE_CONTENT.services;
+  const pageData = servicesContent;
 
   return (
     <div className="space-y-8">
