@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JoeyLLM Website
+
+A Next.js front-end for JoeyLLM — sovereign Australian open-source AI.
 
 ## Getting Started
 
-First, run the development server:
+This repository contains the Next.js front-end for the JoeyLLM website. It uses the App Router, Tailwind CSS, and TypeScript. The codebase is structured to keep most UI server-rendered and confine interactivity to small client components.
+
+## Quick start
+
+Requirements:
+- Node.js 18+ (LTS recommended)
+- npm
+
+Install dependencies and run in development:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## High-level structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/` - Next.js App Router routes and layouts
+	- `src/app/(web)/(home)` - Home route and colocated content
+- `src/components/` - Shared UI components (Feature Card, GlassCard, Footer, .etc)
 
-## Learn More
+## Development notes
 
-To learn more about Next.js, take a look at the following resources:
+- Tailwind CSS powers styling. Adjust `tailwind.config.js` for theme and font changes.
+- Manrope font is included via Next's font helper and exposed as a CSS variable for Tailwind.
+- Keep interactive logic inside client components (`'use client'`) and keep larger components server-rendered for performance.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Ideas / Next steps
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Add lightweight analytics to measure layout choice (A/B testing)
+- Add subtle animations (Framer Motion) to GapFlow/Roadmap for extra polish
+- Consider MDX/Contentlayer if you want editor-friendly content files
 
-## Deploy on Vercel
+## Where to edit content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- The home page content lives at `src/app/(web)/(home)/content.ts`. Edit that file to change headings, gap statements, action paths and roadmap milestones.
+- Route-level content can be colocated as `content.ts` files next to each `page.tsx`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Build & lint
+
+Run a production build and typecheck:
+
+```bash
+npm run build
+```
+
+Run linters (ESLint) and fix issues:
+
+```bash
+npm run lint
+```
+
+
+
