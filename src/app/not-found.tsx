@@ -16,7 +16,7 @@ export default function NotFound() {
             </h1>
           <div className="text-6xl mb-6">?</div>
           <h2 className="text-2xl font-bold text-white mb-4">
-            Hi there, this page doesn't exist or we've done something dumb and broken it.
+            Hi there, this page doesn&apos;t exist or we&apos;ve done something dumb and broken it.
           </h2>
           <p className="text-gray-300 mb-6">
             Our system also automatically disables pages that are vulnerable to attack in some way.

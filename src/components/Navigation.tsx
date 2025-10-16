@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import NewsTicker from "./NewsTicker";
+import ColorSchemePicker from "./ColorSchemePicker";
 
 const pages = [
   { id: "home", label: "Chat", route: "/" },
@@ -10,8 +11,8 @@ const pages = [
     label: "Open Source",
     route: "/opensource",
     subPages: [
-      { id: "littlejoey", label: "LittleJoey", route: "/littlejoey" },
-      { id: "magpie", label: "Magpie", route: "/magpie" },
+      { id: "littlejoey", label: "LittleJoey", route: "/opensource/littlejoey" },
+      { id: "magpie", label: "Magpie", route: "/opensource/magpie" },
     ],
   },
   {
@@ -226,6 +227,7 @@ export default function Navigation() {
         <div className="flex-1" />
 
         <div className="flex items-center gap-3">
+          <ColorSchemePicker />
           <button
             onClick={() => router.push("/opensource")}
             className="px-3 py-1.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200"

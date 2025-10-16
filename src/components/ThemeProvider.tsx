@@ -12,7 +12,13 @@ export type ThemeName =
   | "golden-wattle"
   | string;
 
-const colorThemes: Record<string, any> = {
+type ThemeData = {
+  name: string;
+  description: string;
+  cssVars: Record<string, string>;
+};
+
+const colorThemes: Record<string, ThemeData> = {
   "blue-octopus": {
     name: "Blue Octopus",
     description: "Ocean depths and tentacles",
@@ -133,7 +139,7 @@ export default function ThemeProvider({ theme, children }: Props) {
       Object.entries(themeData.cssVars).forEach(([property, value]) => {
         try {
           root.style.setProperty(property, value as string);
-        } catch (_) {}
+        } catch {}
       });
     }
   }, [theme]);
