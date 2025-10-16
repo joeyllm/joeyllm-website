@@ -1,7 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import GlassCard from "@/components/GlassCard";
 import GradientButton from "@/components/GradientButton";
-import ContentSection from "@/components/ContentSection";
 import FeatureCard from "@/components/FeatureCard";
 import { homeContent as importedHomeContent } from "./content";
 
@@ -29,19 +28,6 @@ export default function HomePage() {
         </div>
       </GlassCard>
 
-      {homeContent.instructions?.title && (
-        <ContentSection title={homeContent.instructions?.title}>
-          <div className="space-y-4">
-            {homeContent.instructions?.steps?.map(
-              (step: string, index: number) => (
-                <p key={index} className="text-gray-300 leading-relaxed">
-                  {step}
-                </p>
-              )
-            )}
-          </div>
-        </ContentSection>
-      )}
 
       <div className="grid md:grid-cols-3 gap-6">
         {homeContent.features && homeContent.features.length > 0 ? (
@@ -89,46 +75,6 @@ export default function HomePage() {
         </p>
       </GlassCard>
 
-      {homeContent.dataCleaningPromo?.title && (
-        <ContentSection title={homeContent.dataCleaningPromo?.title}>
-          <p className="text-gray-300 mb-4">
-            {homeContent.dataCleaningPromo?.intro}
-          </p>
-          <p className="text-gray-300 mb-6">
-            {homeContent.dataCleaningPromo?.approach}
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-6">
-            {homeContent.dataCleaningPromo?.pricing?.map(
-              (
-                tier: { name?: string; price?: string; description?: string },
-                index: number
-              ) => (
-                <div
-                  key={index}
-                  className="p-4 bg-white/5 rounded-xl border border-white/10"
-                >
-                  <h3 className="font-semibold text-white mb-2">{tier.name}</h3>
-                  <p className="text-2xl font-bold text-cyan-400 mb-3">
-                    {tier.price}
-                  </p>
-                  <p className="text-gray-300 text-sm">{tier.description}</p>
-                </div>
-              )
-            )}
-          </div>
-
-          <p className="text-gray-300 mb-4">
-            {homeContent.dataCleaningPromo?.example}
-          </p>
-          <p className="text-gray-300 mb-4">
-            {homeContent.dataCleaningPromo?.goal}
-          </p>
-          <p className="text-gray-400 text-sm">
-            Contact: {homeContent.dataCleaningPromo?.contact}
-          </p>
-        </ContentSection>
-      )}
     </div>
   );
 }
