@@ -87,6 +87,22 @@ Click that link or open it in your browser - that’s your project running local
 
 ---
 
+🧩 Step 7: Install the Claude Code Extension in VS Code
+
+Open VS Code.
+
+Access Extensions: Click on the Extensions view icon in the Activity Bar on the side of the window.
+
+Search for Claude Code: In the Extensions view, type Claude Code in the search bar.
+
+Install the Extension: Find the extension published by Anthropic and click Install.
+
+🧩 Step 8: Set Up Claude Code in VS Code
+
+Open the Claude Code Panel: After installation, click on the Spark icon that appears in the sidebar to open the Claude Code panel.
+
+Authenticate: Follow the prompts to authenticate with your Claude account. Ensure you have access to Claude Code through your subscription or API credits.
+
 ### 💡 Extra Tips
 
 * **If you get errors:** Restart VS Code and try again.
